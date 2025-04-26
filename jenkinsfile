@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git url: 'https://github.com/rani25lodha/AssissmentCapgemini', branch: 'main'
+                git url: 'https://github.com/goyal2/AssissmentCapgemini', branch: 'main'
             }
         }
 
@@ -47,10 +47,10 @@ pipeline {
 
     post {
         success {
-            echo '✅ Image pushed and deployed to Kubernetes successfully!'
+            echo 'Image pushed and deployed to Kubernetes successfully!'
         }
         failure {
-            echo '❌ Pipeline failed during some step!'
+            echo 'Pipeline failed during some step!'
         }
     }
 }
